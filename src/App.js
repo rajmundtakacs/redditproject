@@ -1,10 +1,10 @@
 import './App.css';
-import Counter from './features/Counter/Counter';
+import RedditFeed from './features/Reddit/RedditFeed';
 
 function App() {
   return (
     <div className="App">
-     <Counter />
+      <RedditFeed />
     </div>
   );
 }
