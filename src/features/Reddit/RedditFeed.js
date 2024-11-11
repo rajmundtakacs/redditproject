@@ -8,7 +8,7 @@ const RedditFeed = () => {
     const posts = useSelector((state) => state.reddit.posts);
     const status = useSelector((state) => state.reddit.status);
     const error = useSelector((state) => state.reddit.error);
-    const [subreddit, setSubreddit] = useState('javascript');
+    const [subreddit, setSubreddit] = useState('home');
 
     useEffect(() => {
           dispatch(fetchRedditPosts(subreddit));

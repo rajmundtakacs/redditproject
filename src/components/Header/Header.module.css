@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #B0B0B0;
+}
+
+.title {
+    margin-right: 60px;
+}
+
+.title h1 {
+    font-family: 'Jacquard 24', system-ui;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+}
