@@ -2,8 +2,13 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchRedditPosts = createAsyncThunk(
     'reddit/fetchPosts',
-    async (subreddit) => {
-        const response = await fetch(`https://www.reddit.com/r/${subreddit}/top.json`);
+    async ({ subreddit, searchTerm }) => {
+
+        const searchEndpoint = searchTerm
+        ? `https://www.reddit.com/r/${subreddit}/search.json?q=${searchTerm}&restrict_sr=true`
+        : `https://www.reddit.com/r/${subreddit}/top.json`; 
+
+        const response = await fetch(searchEndpoint);
 
         if (!response.ok) {
             throw new Error('Failed to fetch posts');

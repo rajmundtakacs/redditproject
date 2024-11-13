@@ -1,11 +1,20 @@
 import React from 'react';
+import styles from './Topics.module.css';
 
-const Topics = () => {
+const Topics = ({ onSubredditSelect}) => {
+
+    const popularSubreddits = ['funny', 'AskReddit', 'gaming', 'worldnews', 'todayilearned', 'aww', 'Music', 'memes', 'movies', 'science', 'pics'];
+
     return (
-        <div className="topics">
-            <p>home</p>
-            <p>javascript</p>
-            <p>tech</p>
+        <div className={styles.topics}>
+            <ul>
+                {popularSubreddits.map((subreddit) => (
+                    <li key={subreddit} onClick={() => onSubredditSelect(subreddit)}>
+                        {subreddit}
+                    </li>
+                ))}
+            </ul>
+            
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ onSearch }) => {
     return (
         <div className={styles.header}>
 
@@ -11,7 +11,7 @@ const Header = () => {
             </div>
 
             <div className={styles.searchbar}>
-                <SearchBar />
+                <SearchBar onSearch={onSearch} />
             </div>
     
         </div>

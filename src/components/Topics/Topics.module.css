@@ -1,0 +1,20 @@
+.topics li {
+    color: #EEE0C9;
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.topics li:hover {
+    cursor: pointer;
+}
+
+.topics {
+    position: relative;
+    left: 40px;
+    border-left: 1px solid #EEE0C9;
+}

@@ -2,8 +2,12 @@
     background-color: #D9D9D9;
     font-size: 24px;
     border: 0px;
-    outline: none;
     padding: 5px 10px;
+    caret-color: transparent;
+}
+
+.input:focus {
+    outline: 1px solid grey;
 }
 
 .input::placeholder {
