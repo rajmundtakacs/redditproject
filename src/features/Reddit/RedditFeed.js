@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRedditPosts } from './redditSlice';
 import Feed from '../../components/Feed/Feed';
+import styles from './RedditFeed.module.css';
 
 const RedditFeed = ({ searchTerm, subreddit }) => {
     const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const RedditFeed = ({ searchTerm, subreddit }) => {
 
     return (
         <div>
-            {status === 'loading' && <h1>Loading posts...</h1>}
+            {status === 'loading' && <h1 className={styles.loading}>Loading posts...</h1>}
             {status === 'failed' && <p>Error: {error}</p>}
             {status === 'succeeded' && <Feed posts={posts} />}
         </div>

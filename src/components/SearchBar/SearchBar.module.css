@@ -1,9 +1,13 @@
 .input {
     background-color: #D9D9D9;
-    font-size: 24px;
+    font-size: 23px;
     border: 0px;
     padding: 5px 10px;
     caret-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .input:focus {

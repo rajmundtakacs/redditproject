@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import RedditFeed from './features/Reddit/RedditFeed';
 import Header from './components/Header/Header';
 import Topics from './components/Topics/Topics';
+import PostDetail from './components/PostDetail/PostDetail';
 
 function App() {
 
@@ -18,22 +20,27 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <Router>
+      <div className="app">
 
-      <div className="header">
-        <Header onSearch={handleSearch}/>
-      </div>
-  
-      <div className="main">
-        <div className="redditfeedbox">
-          <RedditFeed searchTerm={searchTerm} subreddit={subreddit} />
+        <div className="header">
+          <Header onSearch={handleSearch}/>
         </div>
-        <div className="topicsbox">
-          <Topics onSubredditSelect={handleSubredditSelect} />
+    
+        <div className="main">
+          <div className="redditfeedbox">
+            <Routes>
+              <Route path="/" element={<RedditFeed searchTerm={searchTerm} subreddit={subreddit} />} />
+              <Route path="/posts/:id" element={<PostDetail />} />
+            </Routes>
+          </div>
+          <div className="topicsbox">
+            <Topics onSubredditSelect={handleSubredditSelect} />
+          </div>
         </div>
-        
+
       </div>
-    </div>
+    </Router>
   );
 }
 

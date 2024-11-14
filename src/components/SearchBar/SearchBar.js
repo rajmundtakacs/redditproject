@@ -18,19 +18,22 @@ const SearchBar = ({ onSearch }) => {
     useEffect(() => {
         const delayDebounceFn = setTimeout(() => {
             onSearch(query);
-        }, 500);
+        }, 1000);
     
         return () => clearTimeout(delayDebounceFn);
     }, [query, onSearch]);
 
     const handleChange = (e) => {
-        const newQuery = e.target.value;
-        setQuery(newQuery);
-        onSearch(newQuery);
-    }
+        setQuery(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+        onSearch(query);    
+    };
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input className={styles.input} 
             type="text" 
             placeholder={placeholderText} 
