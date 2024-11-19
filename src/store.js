@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import redditReducer from './features/Reddit/redditSlice';
+import postReducer from './features/Posts/postSlice.js';
+import commentsReducer from './features/Comments/commentsSlice.js';
 
 const store = configureStore({
     reducer: {
-        reddit: redditReducer,
+        posts: postReducer,
+        comments: commentsReducer,
     }
-})
+});
 
 export default store;
 

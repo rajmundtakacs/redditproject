@@ -1,0 +1,28 @@
+.detailbox {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    margin-bottom: 15px;
+    background-color: #EEE0C9;
+    border-radius: 2px;
+}
+
+.detailbox h2 {
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.detailbox p {
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.detailbox img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

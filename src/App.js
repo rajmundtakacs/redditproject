@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import RedditFeed from './features/Reddit/RedditFeed';
+import PostFeed from './features/Posts/PostFeed';
 import Header from './components/Header/Header';
 import Topics from './components/Topics/Topics';
 import PostDetail from './components/PostDetail/PostDetail';
@@ -30,7 +30,7 @@ function App() {
         <div className="main">
           <div className="redditfeedbox">
             <Routes>
-              <Route path="/" element={<RedditFeed searchTerm={searchTerm} subreddit={subreddit} />} />
+              <Route path="/" element={<PostFeed searchTerm={searchTerm} subreddit={subreddit} />} />
               <Route path="/posts/:id" element={<PostDetail />} />
             </Routes>
           </div>

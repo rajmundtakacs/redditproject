@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRedditPosts } from './redditSlice';
+import { fetchPosts } from './postSlice';
 import Feed from '../../components/Feed/Feed';
-import styles from './RedditFeed.module.css';
+import styles from './PostFeed.module.css';
 
-const RedditFeed = ({ searchTerm, subreddit }) => {
+const PostFeed = ({ searchTerm, subreddit }) => {
     const dispatch = useDispatch();
-    const posts = useSelector((state) => state.reddit.posts);
-    const status = useSelector((state) => state.reddit.status);
-    const error = useSelector((state) => state.reddit.error);
+    const posts = useSelector((state) => state.posts.posts);
+    const status = useSelector((state) => state.posts.status);
+    const error = useSelector((state) => state.posts.error);
 
     useEffect(() => {
-          dispatch(fetchRedditPosts({ subreddit, searchTerm}));
+          dispatch(fetchPosts({ subreddit, searchTerm}));
       }, [dispatch, subreddit, searchTerm]);
 
     return (
@@ -23,4 +23,4 @@ const RedditFeed = ({ searchTerm, subreddit }) => {
     )
 }
 
-export default RedditFeed;
+export default PostFeed;

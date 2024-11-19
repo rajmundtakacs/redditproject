@@ -1,0 +1,20 @@
+.commentbox hr {
+    height: 2px;
+    background-color:#786279;
+    border: none;
+}
+
+.commentbox h4 {
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #786279;
+}
+
+.commentbox p {
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+

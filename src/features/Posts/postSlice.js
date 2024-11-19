@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export const fetchRedditPosts = createAsyncThunk(
-    'reddit/fetchPosts',
+export const fetchPosts = createAsyncThunk(
+    'posts/fetchPosts',
     async ({ subreddit, searchTerm }) => {
 
         const searchEndpoint = searchTerm
@@ -19,8 +19,8 @@ export const fetchRedditPosts = createAsyncThunk(
     }
 );
 
-const redditSlice = createSlice({
-    name: 'reddit',
+const postSlice = createSlice({
+    name: 'posts',
     initialState: {
         posts: [],
         status: 'idle',
@@ -29,20 +29,20 @@ const redditSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchRedditPosts.pending, (state) => {
+            .addCase(fetchPosts.pending, (state) => {
                 state.status = 'loading';
                 state.error = null;
             })
-            .addCase(fetchRedditPosts.fulfilled, (state, action) => {
+            .addCase(fetchPosts.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.posts = action.payload;
             })
-            .addCase(fetchRedditPosts.rejected, (state, action) => {
+            .addCase(fetchPosts.rejected, (state, action) => {
                 state.status = 'failed';
                 state.error = action.error.message;
             });
     }
 })
 
-export default redditSlice.reducer;
+export default postSlice.reducer;
 
