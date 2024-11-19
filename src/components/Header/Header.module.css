@@ -8,11 +8,14 @@
 
 .title {
     margin-right: 60px;
+    padding: 20px;
 }
 
-.title h1 {
+.logolink {
     font-family: 'Jacquard 24', system-ui;
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
+    text-decoration: none;
+    color: #252525;
 }
