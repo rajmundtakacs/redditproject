@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Topics.module.css';
 
 const Topics = ({ onSubredditSelect}) => {
@@ -9,8 +10,10 @@ const Topics = ({ onSubredditSelect}) => {
         <div className={styles.topics}>
             <ul>
                 {popularSubreddits.map((subreddit) => (
-                    <li key={subreddit} onClick={() => onSubredditSelect(subreddit)}>
+                    <li key={subreddit}>
+                        <Link className={styles.topiclink} to ="/" onClick={() => onSubredditSelect(subreddit)} >
                         {subreddit}
+                        </Link>
                     </li>
                 ))}
             </ul>

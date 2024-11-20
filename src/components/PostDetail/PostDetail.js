@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchPosts } from '../../features/Posts/postSlice';
 import styles from './PostDetail.module.css';
 import Comments from '../../features/Comments/Comments';
 
 const PostDetail = () => {
     const { id } = useParams();
-    const [post, setPost] = useState(null);
+    const dispatch = useDispatch();
 
-    const selectedPost = useSelector(state => state.posts.posts.find(post => post.id === id));
+    const post = useSelector(state => state.posts.posts.find(post => post.id === id));
+    const status = useSelector((state) => state.posts.status);
 
     useEffect(() => {
-        if (selectedPost) {
-            setPost(selectedPost);
+        if (!post && status !== 'loading') {
+            dispatch(fetchPosts({ subreddit: 'home', searchTerm: ""}));
         }
-    }, [id, selectedPost]);
+    }, [dispatch, post, status]);
+
+    if (status === 'loading') {
+        return <h2 className ={styles.loading}>Loading post details...</h2>;
+    }
 
     if (!post) {
-        return <p>Loading post details...</p>;
+        return <p>Post not found.</p>
     }
 
     return (

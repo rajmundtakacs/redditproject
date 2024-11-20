@@ -17,7 +17,7 @@ const Comments = ({ postId }) => {
     }, [dispatch, postId]);
 
     if (status === 'loading') {
-        return <p>Loading comments...</p>
+        return <h1 className ={styles.loading}>Loading comments...</h1>
     }
 
     if (status === 'failed') {

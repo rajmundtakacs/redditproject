@@ -26,3 +26,11 @@
     height: auto;
     object-fit: cover;
 }
+
+.loading {
+    color: #EEE0C9;
+    font-family: 'Jacquard 24', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
