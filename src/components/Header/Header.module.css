@@ -19,3 +19,31 @@
     text-decoration: none;
     color: #252525;
 }
+
+
+@media (max-width: 700px) {
+
+    .title {
+        padding: 10px;
+    }
+    .logolink {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .header {
+        display: block;
+    }
+
+    .title {
+        margin-right: 0px;
+    }
+
+    .logolink {
+        font-size: 40px;
+    }
+
+}

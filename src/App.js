@@ -28,14 +28,18 @@ function App() {
         </div>
     
         <div className="main">
+        
           <div className="redditfeedbox">
+            <div className="topicsbox-mobile">
+              <Topics customClass="mobile" onSubredditSelect={handleSubredditSelect} />
+            </div>
             <Routes>
               <Route path="/" element={<PostFeed searchTerm={searchTerm} subreddit={subreddit} />} />
               <Route path="/posts/:id" element={<PostDetail />} />
             </Routes>
           </div>
-          <div className="topicsbox">
-            <Topics onSubredditSelect={handleSubredditSelect} />
+          <div className="topicsbox-desktop">
+            <Topics customClass="desktop" onSubredditSelect={handleSubredditSelect} />
           </div>
         </div>
 

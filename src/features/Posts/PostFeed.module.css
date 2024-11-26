@@ -5,3 +5,11 @@
     font-style: normal;
     font-size: 60px;
 }
+
+@media (max-width: 500px) {
+
+    .loading {
+        font-size: 50px;
+    }
+
+}

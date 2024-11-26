@@ -36,3 +36,32 @@
     color: #786279;
     margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+
+    .postbox {
+        padding: 5px 15px;
+        margin-bottom: 15px;
+    }
+
+    .postbox a {
+        font-size: 16px;
+    }
+
+    .postbox h2 {
+        font-size: 19px;
+    }
+
+    .postbox p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .postbox {
+        padding: 0px 10px 7px 10px;
+        margin-bottom: 15px;
+    }
+    
+}

@@ -12,9 +12,52 @@
   width: 70%;
 }
 
-.topicsbox {
+.topicsbox-desktop {
   width: 20%;
   padding-left: 40px;
+}
+
+.topicsbox-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .topicsbox-desktop {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topicsbox-desktop {
+      padding-left: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .topicsbox-desktop {
+      display:none;
+  }
+
+  .redditfeedbox {
+    width: 100%;
+  }
+
+  .main {
+    margin: 0px 15px 0px 15px;
+  }
+
+  .topicsbox-mobile {
+    display: block;
+  }
+  
+}
+
+@media (max-width: 500px) {
+
+  .main {
+    margin: 0px 10px 0px 10px;
+  }
+  
 }
 
 

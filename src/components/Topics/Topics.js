@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Topics.module.css';
 
-const Topics = ({ onSubredditSelect}) => {
+const Topics = ({ onSubredditSelect, customClass }) => {
 
     const popularSubreddits = ['funny', 'AskReddit', 'gaming', 'worldnews', 'todayilearned', 'aww', 'Music', 'memes', 'movies', 'science', 'pics'];
 
     return (
-        <div className={styles.topics}>
+        <div className={`${styles.topics} ${styles[customClass]}`}>
             <ul>
                 {popularSubreddits.map((subreddit) => (
                     <li key={subreddit}>

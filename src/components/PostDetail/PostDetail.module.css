@@ -34,3 +34,23 @@
     font-style: normal;
     font-size: 50px;
 }
+
+
+
+
+@media (max-width: 768px) {
+
+    .detailbox a {
+        font-size: 16px;
+    }
+    
+    .detailbox h2 {
+        font-size: 19px;
+    }
+    
+    .detailbox p {
+        font-size: 15px;
+    }
+    
+
+}
