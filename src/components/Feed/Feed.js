@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from '../Post/Post';
-import styles from './Feed.module.css';
 
 const Feed = ({ posts }) => {
     return (
