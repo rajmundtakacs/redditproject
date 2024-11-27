@@ -35,7 +35,7 @@ function App() {
             </div>
             <Routes>
               <Route path="/" element={<PostFeed searchTerm={searchTerm} subreddit={subreddit} />} />
-              <Route path="/posts/:id" element={<PostDetail />} />
+              <Route path="/posts/:id" element={<PostDetail subreddit={subreddit} />} />
             </Routes>
           </div>
           <div className="topicsbox-desktop">

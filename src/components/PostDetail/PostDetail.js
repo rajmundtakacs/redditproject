@@ -5,7 +5,7 @@ import { fetchPosts } from '../../features/Posts/postSlice';
 import styles from './PostDetail.module.css';
 import Comments from '../../features/Comments/Comments';
 
-const PostDetail = () => {
+const PostDetail = ({ subreddit }) => {
     const { id } = useParams();
     const dispatch = useDispatch();
 
@@ -14,9 +14,9 @@ const PostDetail = () => {
 
     useEffect(() => {
         if (!post && status !== 'loading') {
-            dispatch(fetchPosts({ subreddit: 'home', searchTerm: ""}));
+            dispatch(fetchPosts({ subreddit, searchTerm: ""}));
         }
-    }, [dispatch, post, status]);
+    }, [dispatch, post, status, subreddit]);
 
     if (status === 'loading') {
         return <h2 className ={styles.loading}>Loading post details...</h2>;

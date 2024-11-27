@@ -39,6 +39,7 @@ const SearchBar = ({ onSearch }) => {
             placeholder={placeholderText} 
             value={query}
             onChange={handleChange}
+            data-testid='search-bar'
             />
         </form>
     )
