@@ -1,65 +1,36 @@
-.app {
-  background-color: #786279;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 .main {
   display: flex;
-  justify-content: flex-start;
-  margin: 20px 20px 0px 20px;
+  align-items: flex-start;
+  margin: 20px 20px 0;
+  gap: 40px;
+  overflow-x: hidden;
 }
 
 .redditfeedbox {
-  width: 70%;
+  flex: 1 1 70%;
+  min-width: 0;
 }
 
 .topicsbox-desktop {
-  width: 20%;
-  padding-left: 40px;
+  flex: 0 0 20%;
+  padding-left: 0;
+  min-width: 220px;
 }
 
-.topicsbox-mobile {
-  display: none;
-}
 
 @media (max-width: 1024px) {
-  .topicsbox-desktop {
-    padding-left: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .topicsbox-desktop {
-      padding-left: 0px;
-  }
+  .main { gap: 20px; }
 }
 
 @media (max-width: 700px) {
-  .topicsbox-desktop {
-      display:none;
-  }
-
-  .redditfeedbox {
-    width: 100%;
-  }
-
-  .main {
-    margin: 0px 15px 0px 15px;
-  }
-
-  .topicsbox-mobile {
-    display: block;
-  }
-  
+  .topicsbox-desktop { display: none; }
+  .redditfeedbox { flex: 1 1 100%; width: 100%; }
+  .main { margin: 0 15px; gap: 0; }
+  .topicsbox-mobile { display: block; }
 }
 
 @media (max-width: 500px) {
-
-  .main {
-    margin: 0px 10px 0px 10px;
-  }
-  
+  .main { margin: 0 10px; }
 }
-
-
-
-
