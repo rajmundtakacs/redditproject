@@ -93,6 +93,11 @@ Uses Redux Toolkit slices for posts and comments.
 
 Routing with React Router v6.
 
+## Design
+
+The final app was implemented based on my own design concept created in [Figma](https://www.figma.com/design/1cse7zwNiYR0RdvVmTElLY/redditproject?node-id=0-1&t=xOPlKq9iJf5sJQrZ-1) before starting development.
+
+
 ## License
 
 This project is for learning and portfolio purposes.
