@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Reddit Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Reddit Clone is a React + Redux application that mimics core Reddit features: browsing posts, filtering by topics, searching, and viewing post details with comments.  
+It was built as a portfolio project to practice **state management, responsive design, and API-driven development**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Live Demo
+[Click here to try the live version on Netlify](https://mapadureddit.netlify.app)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
+- [React 18](https://react.dev/) with Create React App / Vite
+- [Redux Toolkit](https://redux-toolkit.js.org/) for global state management
+- [React Router](https://reactrouter.com/) for navigation
+- Native Fetch API for data fetching
+- Native responsive CSS (media queries, flexbox)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
+- **Post Feed** – browse a list of posts
+- **Post Detail View** – open a post to see full content
+- **Comments** – view comments under each post  
+- **Topic Filtering** – browse posts by category/topic
+- **Search** – find posts by keyword
+- **Responsive Design** – fully mobile- and desktop-friendly  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Requirements
+- Node.js 18+  
+- npm 9+
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation & Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
+```bash
+git clone https://github.com/rajmundtakacs/redditproject.git
+cd redditproject
+```
 
-### `npm run eject`
+2. Install dependencies
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the development server
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app will run at http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Build a production bundle with:
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The build/ folder can be deployed to any static host (GitHub Pages, Netlify, Vercel, etc).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```text
+src/
+  components/      # Reusable UI components (Feed, Post, Searchbar, etc.)
+  features/        # Redux slices and logic (Comments, Posts)
+  App.js           # Main app component
+  store.js         # Redux store configutation
+  index.js         # App entry point
+```
+## Testing
+This project includes a few unit tests written with **Jest** and **React Testing Library** (for Redux slices and UI components).  
+Run them with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm test
+```
 
-### Analyzing the Bundle Size
+## Development Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Built with Create React App (react-scripts).
 
-### Making a Progressive Web App
+Uses Redux Toolkit slices for posts and comments.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Routing with React Router v6.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for learning and portfolio purposes.
+Feel free to fork and adapt for your own use.
