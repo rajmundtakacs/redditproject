@@ -1,6 +1,7 @@
 # Reddit Clone
 
-Reddit Clone is a React + Redux application that mimics core Reddit features: browsing posts, filtering by topics, searching, and viewing post details with comments.  
+Reddit Clone is a React + Redux application that mimics core Reddit features: browsing posts, filtering by topics, searching, and viewing post details with comments.
+The app fetches data from the Reddit public JSON API to display posts, search results, and comments dynamically.
 It was built as a portfolio project to practice **state management, responsive design, and API-driven development**.
 
 ---
@@ -16,6 +17,7 @@ It was built as a portfolio project to practice **state management, responsive d
 - [React Router](https://reactrouter.com/) for navigation
 - Native Fetch API for data fetching
 - Native responsive CSS (media queries, flexbox)
+- Reddit JSON API as the data source
 
 ---
 
